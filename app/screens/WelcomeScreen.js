@@ -13,7 +13,7 @@ const [dnsIp] = useState('0.0.0.0');
             <View style={styles.container}>
                  <Text style={styles.welcomeText}> Welcome to reeferMonitor! </Text>
                  <View style= {styles.container2}>
-                  <ImageBackground style={styles.welcomeImage} source='./app/assets/reefer.jpg'></ImageBackground>
+                  <ImageBackground style={styles.welcomeImage} source='./app/assets/reefer.png'></ImageBackground>
                   </View>
                  <TouchableOpacity style={styles.loginBtn}>
                            <Text style={styles.loginText} onPress={() => { dnsIp === '0.0.0.0' ?  navigation.navigate('dnsScreen') :  navigation.navigate('login')}}>LOGIN</Text>
