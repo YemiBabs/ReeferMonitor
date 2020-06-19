@@ -1,24 +1,25 @@
 import React, { Component, useState } from 'react';
-import { ImageBackground, StyleSheet, View, Text, StatusBar, TextInput, TouchableOpacity } from 'react-native';
+import { Image, StyleSheet, View, Text, StatusBar, TextInput, TouchableOpacity } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { Button } from 'react-native-elements';
-
+import reefer from '../assets/reefer.png';
 
 function WelcomeScreen({ navigation }) {
 
 const [dnsIp] = useState('0.0.0.0');
 
     return (
-            <View style={styles.container}>
-                 <Text style={styles.welcomeText}> Welcome to reeferMonitor! </Text>
+                  <View style={styles.container}>
+                       <Text style={styles.welcomeText}> Welcome to reeferMonitor! </Text>
                  <View style= {styles.container2}>
-                  <ImageBackground style={styles.welcomeImage} source='./app/assets/reefer.png'></ImageBackground>
-                  </View>
-                 <TouchableOpacity style={styles.loginBtn}>
-                           <Text style={styles.loginText} onPress={() => { dnsIp === '0.0.0.0' ?  navigation.navigate('dnsScreen') :  navigation.navigate('login')}}>LOGIN</Text>
-                 </TouchableOpacity>
-            </View>
+                    <Image source={reefer} style={styles.welcomeImage}  />
+
+                 </View>
+                <TouchableOpacity style={styles.loginBtn}>
+                        <Text style={styles.loginText} onPress={() => { dnsIp === '0.0.0.0' ?  navigation.navigate('dnsScreen') :  navigation.navigate('login')}}>LOGIN</Text>
+              </TouchableOpacity>
+           </View>
     );
 }
 
@@ -43,8 +44,8 @@ const styles = StyleSheet.create({
      //  paddingTop: Platform.OS === "android" ? StatusBar.currentHeight + 20 :0,
       },
     welcomeImage: {
-   // width: 200,
-   height: 400,
+    width: 500,
+   height: 500,
     opacity: 0.9,
     justifyContent: "center",
   //alignItems: "center",

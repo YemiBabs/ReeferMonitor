@@ -90,8 +90,8 @@ const styles = StyleSheet.create({
       //   borderRadius: 6,
       //   backgroundColor: "#61dafb",
          color: "#20232a",
-         textAlign: "center",
-         fontSize: 18,
+         textAlign: "auto",
+         fontSize: 24,
        //  fontWeight: "bold"
      },
      });

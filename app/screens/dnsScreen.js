@@ -7,7 +7,7 @@ const [dnsIp, setDnsIp] = useState('0.0.0.0');
 
     return (
       <View style={styles.container}>
-        <Text style={styles.logo}>reeferMonitor</Text>
+        <Text style={styles.logo}>Server DNS</Text>
         <View style={styles.inputView} >
           <TextInput
             style={styles.inputText}
@@ -16,7 +16,7 @@ const [dnsIp, setDnsIp] = useState('0.0.0.0');
             onChangeText={text => this.setState({dns:text})}/>
         </View>
        <TouchableOpacity style={styles.loginBtn}>
-          <Text style={styles.loginText} onPress={() =>  navigation.navigate('login')}>Save</Text>
+          <Text style={styles.loginText} onPress={() =>  navigation.navigate('login')}>SAVE SETTING</Text>
         </TouchableOpacity>
 
       </View>
@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
     fontWeight:"bold",
     fontSize:25,
     color:"#4169E1",
-    marginBottom:40
+    marginBottom:10
   },
   inputView:{
     width:"80%",
@@ -55,13 +55,13 @@ const styles = StyleSheet.create({
     fontSize:11
   },
   loginBtn:{
-    width:"80%",
+    width:"60%",
     backgroundColor:"#1E90FF",
     borderRadius:25,
     height:50,
     alignItems:"center",
     justifyContent:"center",
-    marginTop:40,
+    marginTop:10,
     marginBottom:10
   },
   loginText:{
