@@ -1,19 +1,34 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { Component } from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import WelcomeScreen from './app/screens/WelcomeScreen';
+import dnsScreen from './app/screens/dnsScreen';
+import login from './app/screens/login';
+import YardAreaList from './app/screens/YardAreaList';
+import RowDetails from './app/screens/RowDetails';
+import ReeferDetails from './app/screens/ReeferDetails';
 
-export default function App() {
+
+
+
+
+
+const Stack = createStackNavigator();
+function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-    </View>
+    <NavigationContainer>
+        <Stack.Navigator initialRouteName="Home Screen">
+                <Stack.Screen name="Home Screen" component={WelcomeScreen} />
+                <Stack.Screen name="dnsScreen" component={dnsScreen} />
+                <Stack.Screen name="login" component={login} />
+                <Stack.Screen name="YardAreaList" component={YardAreaList} />
+                <Stack.Screen name="RowDetails" component={RowDetails} />
+                <Stack.Screen name="ReeferDetails" component={ReeferDetails} />
+            </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App
+
+
