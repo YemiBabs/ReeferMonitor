@@ -1,5 +1,5 @@
 import React, { Component, useState } from 'react';
-import { Image, StyleSheet, View, Text, StatusBar, TextInput, TouchableOpacity } from 'react-native';
+import { ImageBackground, StyleSheet, View, Text, StatusBar, TextInput, TouchableOpacity } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { Button } from 'react-native-elements';
@@ -13,7 +13,7 @@ const [dnsIp] = useState('0.0.0.0');
             <View style={styles.container}>
                  <Text style={styles.welcomeText}> Welcome to reeferMonitor! </Text>
                  <View style= {styles.container2}>
-                  <Image style={styles.welcomeImage} src='./app/assets/reefer.jpg'> </Image>
+                  <ImageBackground style={styles.welcomeImage} source='./app/assets/reefer.jpg'></ImageBackground>
                   </View>
                  <TouchableOpacity style={styles.loginBtn}>
                            <Text style={styles.loginText} onPress={() => { dnsIp === '0.0.0.0' ?  navigation.navigate('dnsScreen') :  navigation.navigate('login')}}>LOGIN</Text>
@@ -26,7 +26,7 @@ const [dnsIp] = useState('0.0.0.0');
 
 
 const styles = StyleSheet.create({
-              container: {
+   container: {
     flex: 1,
     padding: 20,
     backgroundColor: '#fff',
@@ -41,7 +41,6 @@ const styles = StyleSheet.create({
       alignItems: "center",
      //  justifyContent: "center",
      //  paddingTop: Platform.OS === "android" ? StatusBar.currentHeight + 20 :0,
-
       },
     welcomeImage: {
    // width: 200,
